@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "ops": [
+                {
+                  "op": "replace",
+                  "source": "energyStorage",
+                  "target": "BlockEntityTag.energyStorage"
+                },
+                {
+                  "op": "replace",
+                  "source": "targetChunks",
+                  "target": "BlockEntityTag.targetChunks"
+                }
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "chunk_regenerator:chunk_regenerator"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "chunk_regenerator:blocks/chunk_regenerator"
+}

@@ -1,0 +1,11 @@
+{
+  "block.chunk_regenerator.chunk_regenerator": "Chunk Regenerator",
+
+  "gui.chunk_regenerator.chunk_regenerator.target_chunk": "Target Chunk (%s, %s)",
+
+  "gui.chunk_regenerator.energy_bar" : "Energy: %d FE / %d FE",
+  "gui.narrate.chunk_regenerator.energy_bar" : "Energy: %d FE of %d FE",
+
+  "command.chunk_regenerator.regeneratechunks.start": "Started chunk regeneration from (%d, %d) to (%d, %d)",
+  "command.chunk_regenerator.regeneratechunks.success": "Complete chunk regeneration for %d chunks. This took %d ms, or %d ms per chunk"
+}
