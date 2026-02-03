@@ -78,7 +78,7 @@ public class ChunkRegenerator {
 
         ProcessorMailbox<Runnable> processorMailbox = ProcessorMailbox.create(Util.backgroundExecutor(), "worldgen-regeneratechunks");
 
-        for (ChunkStatus chunkStatus : ImmutableList.of(ChunkStatus.BIOMES, ChunkStatus.NOISE, ChunkStatus.SURFACE, ChunkStatus.CARVERS, ChunkStatus.FEATURES, ChunkStatus.INITIALIZE_LIGHT, ChunkStatus.LIGHT, ChunkStatus.SPAWN)) {
+        for (ChunkStatus chunkStatus : ImmutableList.of(ChunkStatus.BIOMES, ChunkStatus.NOISE, ChunkStatus.SURFACE, ChunkStatus.CARVERS, ChunkStatus.FEATURES, ChunkStatus.INITIALIZE_LIGHT, ChunkStatus.LIGHT, ChunkStatus.SPAWN, ChunkStatus.FULL)) {
             long generationStartTime = System.currentTimeMillis();
             Supplier unitSupplier = () -> Unit.INSTANCE;
             Objects.requireNonNull(processorMailbox);

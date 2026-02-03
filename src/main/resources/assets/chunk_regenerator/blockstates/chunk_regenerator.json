@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "chunk_regenerator:block/chunk_regenerator"
+    }
+  }
+}
