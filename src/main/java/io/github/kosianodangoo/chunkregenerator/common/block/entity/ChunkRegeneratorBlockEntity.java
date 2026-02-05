@@ -161,9 +161,17 @@ public class ChunkRegeneratorBlockEntity extends BlockEntity implements MenuProv
         saveTargetChunks(compoundTag);
     }
 
+    public boolean isTargetChunk(int x, int z) {
+        return targetChunks[x][z];
+    }
+
     public void toggleTargetChunk(int x, int z) {
-        if (x < 0 || z < 0 || x > RANGE || z > RANGE) return;
-        targetChunks[x][z] = !targetChunks[x][z];
+        setTargetChunk(x, z, !targetChunks[x][z]);
+    }
+
+    public void setTargetChunk(int x, int z, boolean isTarget) {
+        if (x < 0 || z < 0 || x > RANGE || z > RANGE || targetChunks[x][z] == isTarget) return;
+        targetChunks[x][z] = isTarget;
         setChanged();
         if (this.level != null) {
             this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), 3);
