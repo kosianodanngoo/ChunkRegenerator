@@ -166,6 +166,7 @@ public class ChunkRegeneratorBlockEntity extends BlockEntity implements MenuProv
     }
 
     public void toggleTargetChunk(int x, int z) {
+        if (x < 0 || z < 0 || x > RANGE || z > RANGE) return;
         setTargetChunk(x, z, !targetChunks[x][z]);
     }
 
